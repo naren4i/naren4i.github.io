@@ -31,8 +31,11 @@ h1 {
 }
 
 .music-list li {
-    margin-top: 10px;
+    margin-top: 20px;
     color: #333;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .music-list a {
