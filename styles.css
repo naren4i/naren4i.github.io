@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 24px;
+}
+
+.music-list {
+    list-style: none;
+    padding: 0;
+}
+
+.music-list li {
+    margin-top: 10px;
+    color: #333;
+}
+
+.music-list a {
+    color: #333;
+    text-decoration: none;
+}
+
+.music-list i {
+    margin-left: 5px;
+}
