@@ -40,6 +40,12 @@ h1 {
     text-decoration: none;
 }
 
+.music-info {
+    font-size: 9px;
+    color: #666;
+    margin-top: 5px;
+}
+
 .music-list i {
     margin-left: 5px;
 }
