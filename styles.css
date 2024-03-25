@@ -30,12 +30,10 @@ h1 {
     padding: 0;
 }
 
-.music-list li {
-    margin-top: 20px;
-    color: #333;
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 5px;
+.music-list li:not(:last-child) {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .music-list a {
