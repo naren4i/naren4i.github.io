@@ -1,30 +1,35 @@
 const musicData = [
     {
-        title: 'Hinonaka 「Luminous」',
+        title: '「Luminous」',
+        artist: 'Hinonaka',
         url: 'https://youtu.be/ijiYvLPw4Mo?si=fpeyo_j10-5HnqT_&t=1495',
         info: '作曲・編曲',
         date: '2025-03-29'
     },
     {
-        title: 'Aubemare 「도화（刀火）」',
+        title: '「도화（刀火）」',
+        artist: 'Aubemare',
         url: 'https://youtu.be/joDk1gs7m6g',
         info: '作曲・編曲',
         date: '2024-10-25'
     },
     {
-        title: 'Aubemare 「백야（Midnight Sun）」',
+        title: '「백야（Midnight Sun）」',
+        artist: 'Aubemare',
         url: 'https://youtu.be/oN4OhS6gHuY',
         info: '作曲・編曲',
         date: '2024-07-19'
     },
     {
-        title: 'Celestial Squad 「활로( 活路 )」',
+        title: '「활로( 活路 )」',
+        artist: 'Celestial Squad',
         url: 'https://youtu.be/8rfsofOQeXs',
         info: '作曲・編曲',
         date: '2024-03-24'
     },
     {
-        title: 'LyuU 「レグルス」',
+        title: '「レグルス」',
+        artist: 'LyuU',
         url: 'https://youtu.be/AZ5VLJRaYgU',
         info: '作詞・作曲・編曲',
         date: '2016-04-22'
@@ -32,6 +37,17 @@ const musicData = [
 ];
 
 // 연도별로 그룹화하고 최신순 정렬
+//const groupedByYear = {};
+//
+//musicData.sort((a, b) => new Date(b.date) - new Date(a.date)).forEach(item => {
+//    const year = new Date(item.date).getFullYear();
+//    if (!groupedByYear[year]) {
+//        groupedByYear[year] = [];
+//    }
+//    groupedByYear[year].push(item);
+//});
+
+
 const groupedByYear = {};
 
 // 데이터를 한 번만 처리하여 연도와 날짜를 추출
@@ -62,6 +78,8 @@ processedData.forEach(item => {
 });
 
 
+
+
 // 렌더링
 const musicList = document.querySelector('.music-list');
 musicList.innerHTML = ''; // 초기화
@@ -88,6 +106,7 @@ for (const year of Object.keys(groupedByYear).sort((a, b) => b - a)) {
             </a>
             <div class="music-details">
                 <a href="${item.url}" target="_blank" class="title">${item.title}</a>
+                <p class="music-artist">${item.artist}</p>
                 <p class="music-info">${item.info}</p>
                 <p class="music-date">${item.date}</p>
             </div>
