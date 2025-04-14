@@ -141,6 +141,11 @@ h1 {
     color: #ff4d4d;
 }
 
+.music-artist {
+    color: #000;
+    font-size: 0.9rem;
+}
+
 .music-info {
     color: #555;
     font-size: 0.9rem;
