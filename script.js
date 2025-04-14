@@ -34,13 +34,33 @@ const musicData = [
 // 연도별로 그룹화하고 최신순 정렬
 const groupedByYear = {};
 
-musicData.sort((a, b) => new Date(b.date) - new Date(a.date)).forEach(item => {
-    const year = new Date(item.date).getFullYear();
-    if (!groupedByYear[year]) {
-        groupedByYear[year] = [];
-    }
-    groupedByYear[year].push(item);
+// 데이터를 한 번만 처리하여 연도와 날짜를 추출
+const processedData = musicData.map(item => {
+    const date = new Date(item.date);
+    return {
+        ...item,
+        year: date.getFullYear(),
+        timestamp: date.getTime()  // Date 객체를 밀리초로 변환
+    };
 });
+
+// 연도순 최신 -> 오래된 순, 동일 연도 내에서는 날짜순 오래된 순으로 정렬
+processedData.sort((a, b) => {
+    // 연도순으로 최신순 정렬
+    if (a.year !== b.year) return b.year - a.year;
+    
+    // 같은 연도 내에서는 날짜순으로 오래된 순 정렬
+    return a.timestamp - b.timestamp;
+});
+
+// 그룹화 작업
+processedData.forEach(item => {
+    if (!groupedByYear[item.year]) {
+        groupedByYear[item.year] = [];
+    }
+    groupedByYear[item.year].push(item);
+});
+
 
 // 렌더링
 const musicList = document.querySelector('.music-list');
@@ -89,18 +109,6 @@ function resizeCanvas() {
 }
 window.addEventListener('resize', resizeCanvas);
 resizeCanvas();
-
-// 선의 기본 속성 설정 (고정된 선)
-let lines = [];
-for (let i = 0; i < 15; i++) {
-    lines.push({
-        x1: Math.random() * width,
-        y1: Math.random() * height,
-        angle: Math.random() * Math.PI * 2, // 초기 각도 설정
-        length: Math.random() * 200 + 100, // 선의 초기 길이
-        color: `hsla(${(i * 15) % 360}, 0%, 50%, 0.6)` // 그레이톤 색상
-    });
-}
 
 function animateBackground() {
     // 배경 색상: 부드러운 베이지 색
