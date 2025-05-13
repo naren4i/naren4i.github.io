@@ -1,5 +1,26 @@
 const musicData = [
     {
+        title: '「SE」',
+        artist: 'ふわふわりん♡パステル',
+        url: 'https://youtu.be/oicNSuxiXkE',
+        info: '作曲・編曲',
+        date: '2025-05-13'
+    },
+    {
+        title: '「Pastel Dream」',
+        artist: 'ふわふわりん♡パステル',
+        url: 'https://youtu.be/n9MmYLdDoGw',
+        info: '作曲・編曲',
+        date: '2025-05-13'
+    },
+    {
+        title: '「Sugar Rush」',
+        artist: 'ふわふわりん♡パステル',
+        url: 'https://youtu.be/1E3gkzjJgU8',
+        info: '作曲・編曲',
+        date: '2025-05-13'
+    },
+    {
         title: '「Luminous」',
         artist: 'Hinonaka',
         url: 'https://youtu.be/ijiYvLPw4Mo?si=fpeyo_j10-5HnqT_&t=1495',
@@ -130,7 +151,6 @@ window.addEventListener('resize', resizeCanvas);
 resizeCanvas();
 
 function animateBackground() {
-    // 배경 색상: 부드러운 베이지 색
     ctx.fillStyle = 'rgba(245, 245, 220, 1)'; // 베이지 색 (배경)
     ctx.fillRect(0, 0, width, height);
 
@@ -143,7 +163,7 @@ function animateBackground() {
     const hue = Math.floor(scrollPercent * 360);
     const fillColor = `hsl(${hue}, 70%, 60%)`; // 스크롤에 따라 색상 변화
 
-    // 다각형 (삼각형) 애니메이션 예시
+    // 삼각형
     const triangleSize = (scrollPercent * 100) + 30; // 스크롤에 따라 삼각형 크기 변화
     ctx.beginPath();
     ctx.moveTo(width / 2 - triangleSize, height / 2 + triangleSize);
