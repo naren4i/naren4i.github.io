@@ -1,5 +1,12 @@
 const musicData = [
     {
+        title: '「MAYDAY」',
+        artist: 'CYBERNETICS',
+        url: 'https://youtu.be/8GxifRoAGQQ',
+        info: '共作詞・作曲・編曲',
+        date: '2025-08-12'
+    },
+    {
         title: '「SE」',
         artist: 'ふわふわりん♡パステル',
         url: 'https://youtu.be/oicNSuxiXkE',
