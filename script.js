@@ -1,5 +1,12 @@
 const musicData = [
     {
+        title: '「夏の色はパステル色」',
+        artist: 'ふわふわりん♡パステル',
+        url: 'https://youtu.be/wH5Y_80MUCs',
+        info: '作曲・編曲・作詞',
+        date: '2025-08-17'
+    },
+    {
         title: '「MAYDAY」',
         artist: 'CYBERNETICS',
         url: 'https://youtu.be/8GxifRoAGQQ',
