@@ -135,6 +135,10 @@ for (const year of Object.keys(groupedByYear).sort((a, b) => b - a)) {
     const grid = document.createElement('div');
     grid.className = 'music-grid';
 
+    yearHeader.addEventListener('click', () => {
+        grid.classList.toggle('active');
+    });
+
     groupedByYear[year].forEach(item => {
         const videoId = new URL(item.url).searchParams.get('v') || item.url.split('/').pop().split('?')[0];
         const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`;
