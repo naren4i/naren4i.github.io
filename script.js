@@ -9,28 +9,28 @@ const musicData = [
     {
         title: '「MAYDAY」',
         artist: 'CYBERNETICS',
-        url: 'https://youtu.be/8GxifRoAGQQ',
+        url: 'https://youtu.be/aZqa_RDUf4E',
         info: '作曲・編曲・共作詞',
         date: '2025-08-12'
     },
     {
         title: '「SE」',
         artist: 'ふわふわりん♡パステル',
-        url: 'https://youtu.be/oicNSuxiXkE',
+        url: 'https://youtu.be/IJpAxe4c7Pk',
         info: '作曲・編曲',
         date: '2025-05-13'
     },
     {
         title: '「Pastel Dream」',
         artist: 'ふわふわりん♡パステル',
-        url: 'https://youtu.be/n9MmYLdDoGw',
+        url: 'https://youtu.be/EDMQTQr0KZo',
         info: '作曲・編曲',
         date: '2025-05-13'
     },
     {
         title: '「Sugar Rush」',
         artist: 'ふわふわりん♡パステル',
-        url: 'https://youtu.be/1E3gkzjJgU8',
+        url: 'https://youtu.be/K4BuYlFx53M',
         info: '作曲・編曲',
         date: '2025-05-13'
     },
