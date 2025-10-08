@@ -1,5 +1,12 @@
 const musicData = [
     {
+        title: '「항해」',
+        artist: 'Celestial Squad',
+        url: 'https://youtu.be/gv13keUixHU?si=38T8lBg25uChmKsT&t=662',
+        info: '作曲・編曲',
+        date: '2025-09-27'
+    },
+    {
         title: '「夏の色はパステル色」',
         artist: 'ふわふわりん♡パステル',
         url: 'https://youtu.be/stISRE5xerE',
