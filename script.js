@@ -136,7 +136,20 @@ for (const year of Object.keys(groupedByYear).sort((a, b) => b - a)) {
     grid.className = 'music-grid';
 
     yearHeader.addEventListener('click', () => {
-        grid.classList.toggle('active');
+        // active 클래스를 토글하여 상태를 관리하고, 다른 열린 항목을 닫습니다.
+        const currentlyActive = grid.classList.contains('active');
+    
+        // 모든 music-grid에서 active와 maxHeight를 제거 (하나만 열리게)
+        document.querySelectorAll('.music-grid.active').forEach(activeGrid => {
+            activeGrid.classList.remove('active');
+            activeGrid.style.maxHeight = null;
+        });
+
+        // 만약 클릭한 항목이 이미 열려있던 게 아니라면, 새로 열어줍니다.
+        if (!currentlyActive) {
+            grid.classList.add('active');
+            grid.style.maxHeight = grid.scrollHeight + 'px';
+        }
     });
 
     groupedByYear[year].forEach(item => {
