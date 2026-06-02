@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Narenai | Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts (Outfit & Plus Jakarta Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif;
+        }
+
+        .font-title {
+            font-family: 'Outfit', sans-serif;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-stone-50 text-stone-900 min-h-screen flex flex-col justify-between selection:bg-stone-200 selection:text-stone-900 relative overflow-x-hidden">
+
+    <!-- Ambient Background Image & Glows -->
+    <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+        <!-- Clean Light Image overlay with balanced opacity for perfect text readability -->
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.3]"
+            style="background-image: url('./bg.png');"></div>
+        <!-- Very subtle glow to keep background simple and sophisticated -->
+        <div class="absolute -top-[10%] -right-[10%] w-[50%] h-[50%] rounded-full bg-amber-100/10 blur-[80px]"></div>
+        <div class="absolute -bottom-[10%] -left-[5%] w-[40%] h-[40%] rounded-full bg-rose-50/15 blur-[80px]"></div>
+    </div>
+
+    <!-- Content Wrapper -->
+    <div class="relative z-10 flex flex-col justify-between min-h-screen w-full">
+
+        <!-- Main Container -->
+        <main class="max-w-2xl mx-auto px-6 py-20 w-full space-y-20">
+
+            <!-- 1. Header / Profile & Contact -->
+            <header class="space-y-6">
+                <div class="space-y-2">
+                    <h1 class="text-4xl font-bold font-title tracking-tight text-stone-900">
+                        Narenai
+                    </h1>
+                    <p class="text-sm font-semibold tracking-widest text-stone-500 uppercase">
+                        Composer / Arranger
+                    </p>
+                </div>
+                <p class="text-stone-700 leading-relaxed text-sm max-w-lg" data-i18n="profile-desc">
+                    韓国と日本の地下アイドルを中心に楽曲提供をしています。
+                </p>
+
+                <!-- Contact Links (Inline inside profile) -->
+                <div class="pt-4 space-y-4">
+                    <p class="text-xs text-stone-500 leading-relaxed" data-i18n="contact-desc">
+                        ご依頼は、XのDMよりお気軽にご相談ください。
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <a href="https://x.com/naren4i" target="_blank" rel="noopener noreferrer"
+                            class="inline-flex items-center gap-2 text-xs font-medium text-stone-700 hover:text-stone-955 transition-all duration-200 bg-white/70 hover:bg-white/95 px-3.5 py-2 rounded-lg border border-stone-200/60 backdrop-blur-sm shadow-sm">
+                            <!-- X Icon -->
+                            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                                </path>
+                            </svg>
+                            <span>X (Twitter)</span>
+                        </a>
+                        <a href="https://www.youtube.com/@narenai" target="_blank" rel="noopener noreferrer"
+                            class="inline-flex items-center gap-2 text-xs font-medium text-stone-700 hover:text-stone-955 transition-all duration-200 bg-white/70 hover:bg-white/95 px-3.5 py-2 rounded-lg border border-stone-200/60 backdrop-blur-sm shadow-sm">
+                            <!-- Youtube Icon -->
+                            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.108C19.53 3.5 12 3.5 12 3.5s-7.53 0-9.388.555A3.002 3.002 0 0 0 .502 6.163C0 8.07 0 12 0 12s0 3.93 .502 5.837a3.003 3.003 0 0 0 2.11 2.108C4.47 20.5 12 20.5 12 20.5s7.53 0 9.388-.555a3.002 3.002 0 0 0 2.11-2.108C24 15.93 24 12 24 12s0-3.93-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z">
+                                </path>
+                            </svg>
+                            <span>YOUTUBE</span>
+                        </a>
+                    </div>
+                </div>
+            </header>
+
+            <!-- 2. Works -->
+            <section class="space-y-8">
+                <h2 class="text-xs font-semibold tracking-widest text-stone-400 uppercase border-b border-stone-200 pb-3"
+                    data-i18n="works-title">
+                    Works
+                </h2>
+                <div class="space-y-8">
+                    <!-- Aubemare -->
+                    <div class="space-y-3">
+                        <h3
+                            class="text-sm font-semibold text-stone-800 font-title tracking-wide flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-amber-500/80"></span>
+                            <span>Aubemare</span>
+                        </h3>
+                        <div class="pl-4 border-l border-stone-200/80 space-y-2">
+                            <a href="https://youtu.be/xtSkvudO084" target="_blank" rel="noopener noreferrer"
+                                class="py-2.5 flex items-center justify-between gap-4 group hover:bg-white/40 px-3 -mx-3 rounded-lg transition-all duration-200">
+                                <div class="flex items-center gap-3 min-w-0">
+                                    <span class="text-xs font-mono text-stone-400 shrink-0">2024</span>
+                                    <span
+                                        class="text-sm font-medium text-stone-800 truncate group-hover:text-amber-800 transition-colors">도화</span>
+                                </div>
+                                <span data-i18n="role-comp-arr"
+                                    class="text-xs px-2.5 py-1 rounded-full bg-white/80 text-stone-600 border border-stone-200/80 shrink-0 backdrop-blur-sm group-hover:border-amber-300 group-hover:text-amber-800 group-hover:bg-amber-50/50 transition-all shadow-sm">作曲・編曲</span>
+                            </a>
+                            <a href="https://youtu.be/oN4OhS6gHuY" target="_blank" rel="noopener noreferrer"
+                                class="py-2.5 flex items-center justify-between gap-4 group hover:bg-white/40 px-3 -mx-3 rounded-lg transition-all duration-200">
+                                <div class="flex items-center gap-3 min-w-0">
+                                    <span class="text-xs font-mono text-stone-400 shrink-0">2024</span>
+                                    <span
+                                        class="text-sm font-medium text-stone-800 truncate group-hover:text-amber-800 transition-colors">백야</span>
+                                </div>
+                                <span data-i18n="role-comp-arr"
+                                    class="text-xs px-2.5 py-1 rounded-full bg-white/80 text-stone-600 border border-stone-200/80 shrink-0 backdrop-blur-sm group-hover:border-amber-300 group-hover:text-amber-800 group-hover:bg-amber-50/50 transition-all shadow-sm">作曲・編曲</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- b∞km@rk -->
+                    <div class="space-y-3">
+                        <h3
+                            class="text-sm font-semibold text-stone-800 font-title tracking-wide flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-amber-500/80"></span>
+                            <span>b∞km@rk</span>
+                        </h3>
+                        <div class="pl-4 border-l border-stone-200/80 space-y-2">
+                            <a href="https://www.youtube.com/watch?v=f4_I4T9ePq0" target="_blank"
+                                rel="noopener noreferrer"
+                                class="py-2.5 flex items-center justify-between gap-4 group hover:bg-white/40 px-3 -mx-3 rounded-lg transition-all duration-200">
+                                <div class="flex items-center gap-3 min-w-0">
+                                    <span class="text-xs font-mono text-stone-400 shrink-0">2026</span>
+                                    <span
+                                        class="text-sm font-medium text-stone-800 truncate group-hover:text-amber-800 transition-colors">残響はまだ消えない</span>
+                                </div>
+                                <span data-i18n="role-all"
+                                    class="text-xs px-2.5 py-1 rounded-full bg-white/80 text-stone-600 border border-stone-200/80 shrink-0 backdrop-blur-sm group-hover:border-amber-300 group-hover:text-amber-800 group-hover:bg-amber-50/50 transition-all shadow-sm">作詞・作曲・編曲</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Celestial Squad -->
+                    <div class="space-y-3">
+                        <h3
+                            class="text-sm font-semibold text-stone-800 font-title tracking-wide flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-amber-500/80"></span>
+                            <span>Celestial Squad</span>
+                        </h3>
+                        <div class="pl-4 border-l border-stone-200/80 space-y-2">
+                            <a href="https://youtu.be/gv13keUixHU?si=38T8lBg25uChmKsT&t=662" target="_blank"
+                                rel="noopener noreferrer"
+                                class="py-2.5 flex items-center justify-between gap-4 group hover:bg-white/40 px-3 -mx-3 rounded-lg transition-all duration-200">
+                                <div class="flex items-center gap-3 min-w-0">
+                                    <span class="text-xs font-mono text-stone-400 shrink-0">2025</span>
+                                    <span
+                                        class="text-sm font-medium text-stone-800 truncate group-hover:text-amber-800 transition-colors">항해</span>
+                                </div>
+                                <span data-i18n="role-comp-arr"
+                                    class="text-xs px-2.5 py-1 rounded-full bg-white/80 text-stone-600 border border-stone-200/80 shrink-0 backdrop-blur-sm group-hover:border-amber-300 group-hover:text-amber-800 group-hover:bg-amber-50/50 transition-all shadow-sm">作曲・編曲</span>
+                            </a>
+                            <a href="https://youtu.be/8rfsofOQeXs" target="_blank" rel="noopener noreferrer"
+                                class="py-2.5 flex items-center justify-between gap-4 group hover:bg-white/40 px-3 -mx-3 rounded-lg transition-all duration-200">
+                                <div class="flex items-center gap-3 min-w-0">
+                                    <span class="text-xs font-mono text-stone-400 shrink-0">2024</span>
+                                    <span
+                                        class="text-sm font-medium text-stone-800 truncate group-hover:text-amber-800 transition-colors">활로</span>
+                                </div>
+                                <span data-i18n="role-comp-arr"
+                                    class="text-xs px-2.5 py-1 rounded-full bg-white/80 text-stone-600 border border-stone-200/80 shrink-0 backdrop-blur-sm group-hover:border-amber-300 group-hover:text-amber-800 group-hover:bg-amber-50/50 transition-all shadow-sm">作曲・編曲</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- CYBERNETICS -->
+                    <div class="space-y-3">
+                        <h3
+                            class="text-sm font-semibold text-stone-800 font-title tracking-wide flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-amber-500/80"></span>
+                            <span>CYBERNETICS</span>
+                        </h3>
+                        <div class="pl-4 border-l border-stone-200/80 space-y-2">
+                            <a href="https://youtu.be/aZqa_RDUf4E" target="_blank" rel="noopener noreferrer"
+                                class="py-2.5 flex items-center justify-between gap-4 group hover:bg-white/40 px-3 -mx-3 rounded-lg transition-all duration-200">
+                                <div class="flex items-center gap-3 min-w-0">
+                                    <span class="text-xs font-mono text-stone-400 shrink-0">2025</span>
+                                    <span
+                                        class="text-sm font-medium text-stone-800 truncate group-hover:text-amber-800 transition-colors">MAYDAY</span>
+                                </div>
+                                <span data-i18n="role-co-all"
+                                    class="text-xs px-2.5 py-1 rounded-full bg-white/80 text-stone-600 border border-stone-200/80 shrink-0 backdrop-blur-sm group-hover:border-amber-300 group-hover:text-amber-800 group-hover:bg-amber-50/50 transition-all shadow-sm">共作詞・作曲・編曲</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Hinonaka -->
+                    <div class="space-y-3">
+                        <h3
+                            class="text-sm font-semibold text-stone-800 font-title tracking-wide flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-amber-500/80"></span>
+                            <span>Hinonaka</span>
+                        </h3>
+                        <div class="pl-4 border-l border-stone-200/80 space-y-2">
+                            <a href="https://youtu.be/ijiYvLPw4Mo?si=fpeyo_j10-5HnqT_&t=1495" target="_blank"
+                                rel="noopener noreferrer"
+                                class="py-2.5 flex items-center justify-between gap-4 group hover:bg-white/40 px-3 -mx-3 rounded-lg transition-all duration-200">
+                                <div class="flex items-center gap-3 min-w-0">
+                                    <span class="text-xs font-mono text-stone-400 shrink-0">2025</span>
+                                    <span
+                                        class="text-sm font-medium text-stone-800 truncate group-hover:text-amber-800 transition-colors">Luminous</span>
+                                </div>
+                                <span data-i18n="role-comp-arr"
+                                    class="text-xs px-2.5 py-1 rounded-full bg-white/80 text-stone-600 border border-stone-200/80 shrink-0 backdrop-blur-sm group-hover:border-amber-300 group-hover:text-amber-800 group-hover:bg-amber-50/50 transition-all shadow-sm">作曲・編曲</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- LyuU -->
+                    <div class="space-y-3">
+                        <h3
+                            class="text-sm font-semibold text-stone-800 font-title tracking-wide flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-amber-500/80"></span>
+                            <span>LyuU</span>
+                        </h3>
+                        <div class="pl-4 border-l border-stone-200/80 space-y-2">
+                            <a href="https://youtu.be/AZ5VLJRaYgU" target="_blank" rel="noopener noreferrer"
+                                class="py-2.5 flex items-center justify-between gap-4 group hover:bg-white/40 px-3 -mx-3 rounded-lg transition-all duration-200">
+                                <div class="flex items-center gap-3 min-w-0">
+                                    <span class="text-xs font-mono text-stone-400 shrink-0">2016</span>
+                                    <span
+                                        class="text-sm font-medium text-stone-800 truncate group-hover:text-amber-800 transition-colors">レグルス</span>
+                                </div>
+                                <span data-i18n="role-all"
+                                    class="text-xs px-2.5 py-1 rounded-full bg-white/80 text-stone-600 border border-stone-200/80 shrink-0 backdrop-blur-sm group-hover:border-amber-300 group-hover:text-amber-800 group-hover:bg-amber-50/50 transition-all shadow-sm">作詞・作曲・編曲</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 羽澄るな -->
+                    <div class="space-y-3">
+                        <h3
+                            class="text-sm font-semibold text-stone-800 font-title tracking-wide flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-amber-500/80"></span>
+                            <span>羽澄るな</span>
+                        </h3>
+                        <div class="pl-4 border-l border-stone-200/80 space-y-2">
+                            <div class="py-2.5 flex items-center justify-between gap-4 px-3 -mx-3 rounded-lg">
+                                <div class="flex items-center gap-3 min-w-0">
+                                    <span class="text-xs font-mono text-stone-400 shrink-0">2026</span>
+                                    <span class="text-sm font-medium text-stone-700 truncate">Bouquet</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span data-i18n="role-arr"
+                                        class="text-xs px-2.5 py-1 rounded-full bg-white/60 text-stone-500 border border-stone-200/60 shrink-0 backdrop-blur-sm shadow-sm">編曲</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ふわふわりん♡パステル -->
+                    <div class="space-y-3">
+                        <h3
+                            class="text-sm font-semibold text-stone-800 font-title tracking-wide flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-amber-500/80"></span>
+                            <span>ふわふわりん♡パステル</span>
+                        </h3>
+                        <div class="pl-4 border-l border-stone-200/80 space-y-2">
+                            <a href="https://youtu.be/stISRE5xerE" target="_blank" rel="noopener noreferrer"
+                                class="py-2.5 flex items-center justify-between gap-4 group hover:bg-white/40 px-3 -mx-3 rounded-lg transition-all duration-200">
+                                <div class="flex items-center gap-3 min-w-0">
+                                    <span class="text-xs font-mono text-stone-400 shrink-0">2025</span>
+                                    <span
+                                        class="text-sm font-medium text-stone-800 truncate group-hover:text-amber-800 transition-colors">夏の色はパステル色</span>
+                                </div>
+                                <span data-i18n="role-all"
+                                    class="text-xs px-2.5 py-1 rounded-full bg-white/80 text-stone-600 border border-stone-200/80 shrink-0 backdrop-blur-sm group-hover:border-amber-300 group-hover:text-amber-800 group-hover:bg-amber-50/50 transition-all shadow-sm">作詞・作曲・編曲</span>
+                            </a>
+                            <a href="https://youtu.be/K4BuYlFx53M" target="_blank" rel="noopener noreferrer"
+                                class="py-2.5 flex items-center justify-between gap-4 group hover:bg-white/40 px-3 -mx-3 rounded-lg transition-all duration-200">
+                                <div class="flex items-center gap-3 min-w-0">
+                                    <span class="text-xs font-mono text-stone-400 shrink-0">2025</span>
+                                    <span
+                                        class="text-sm font-medium text-stone-800 truncate group-hover:text-amber-800 transition-colors">Sugar
+                                        Rush</span>
+                                </div>
+                                <span data-i18n="role-comp-arr"
+                                    class="text-xs px-2.5 py-1 rounded-full bg-white/80 text-stone-600 border border-stone-200/80 shrink-0 backdrop-blur-sm group-hover:border-amber-300 group-hover:text-amber-800 group-hover:bg-amber-50/50 transition-all shadow-sm">作曲・編曲</span>
+                            </a>
+                            <a href="https://youtu.be/EDMQTQr0KZo" target="_blank" rel="noopener noreferrer"
+                                class="py-2.5 flex items-center justify-between gap-4 group hover:bg-white/40 px-3 -mx-3 rounded-lg transition-all duration-200">
+                                <div class="flex items-center gap-3 min-w-0">
+                                    <span class="text-xs font-mono text-stone-400 shrink-0">2025</span>
+                                    <span
+                                        class="text-sm font-medium text-stone-800 truncate group-hover:text-amber-800 transition-colors">Pastel
+                                        Dream</span>
+                                </div>
+                                <span data-i18n="role-comp-arr"
+                                    class="text-xs px-2.5 py-1 rounded-full bg-white/80 text-stone-600 border border-stone-200/80 shrink-0 backdrop-blur-sm group-hover:border-amber-300 group-hover:text-amber-800 group-hover:bg-amber-50/50 transition-all shadow-sm">作曲・編曲</span>
+                            </a>
+                            <a href="https://youtu.be/IJpAxe4c7Pk" target="_blank" rel="noopener noreferrer"
+                                class="py-2.5 flex items-center justify-between gap-4 group hover:bg-white/40 px-3 -mx-3 rounded-lg transition-all duration-200">
+                                <div class="flex items-center gap-3 min-w-0">
+                                    <span class="text-xs font-mono text-stone-400 shrink-0">2025</span>
+                                    <span
+                                        class="text-sm font-medium text-stone-800 truncate group-hover:text-amber-800 transition-colors">SE</span>
+                                </div>
+                                <span data-i18n="role-comp-arr"
+                                    class="text-xs px-2.5 py-1 rounded-full bg-white/80 text-stone-600 border border-stone-200/80 shrink-0 backdrop-blur-sm group-hover:border-amber-300 group-hover:text-amber-800 group-hover:bg-amber-50/50 transition-all shadow-sm">作曲・編曲</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const i18n = {
+                ko: {
+                    "profile-desc": "한국과 일본의 지하 아이돌을 중심으로 곡을 제공하고 있습니다.",
+                    "contact-desc": "의뢰는 X의 DM으로 편하게 문의해주세요.",
+                    "role-all": "작사・작곡・편곡",
+                    "role-comp-arr": "작곡・편곡",
+                    "role-co-all": "작곡・편곡・공동 작사",
+                    "role-arr": "편곡",
+                    "works-title": "Works"
+                },
+                ja: {
+                    "profile-desc": "韓国と日本の地下アイドルを中心に楽曲提供をしています。",
+                    "contact-desc": "ご依頼は、XのDMよりお気軽にご相談ください。",
+                    "role-all": "作詞・作曲・編曲",
+                    "role-comp-arr": "作曲・編曲",
+                    "role-co-all": "作曲・編曲・共作詞",
+                    "role-arr": "編曲",
+                    "works-title": "Works"
+                }
+            };
+
+            let preferredLang = 'ja';
+            if (navigator.languages && navigator.languages.length > 0) {
+                preferredLang = navigator.languages[0];
+            } else {
+                preferredLang = navigator.language || navigator.userLanguage || 'ja';
+            }
+            const lang = preferredLang.toLowerCase().startsWith('ko') ? 'ko' : 'ja';
+
+            document.documentElement.lang = lang;
+
+            document.querySelectorAll("[data-i18n]").forEach(elem => {
+                const key = elem.getAttribute("data-i18n");
+                if (i18n[lang] && i18n[lang][key]) {
+                    elem.textContent = i18n[lang][key];
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
