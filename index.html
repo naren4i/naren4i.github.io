@@ -1,451 +1,51 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Narenai | Portfolio</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts (Outfit & Plus Jakarta Sans) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif;
-        }
-
-        .font-title {
-            font-family: 'Outfit', sans-serif;
-        }
-    </style>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DL296TSZNG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-DL296TSZNG');
-</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f8f7f2">
+<title>narenai | Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="script.js" defer></script>
 </head>
-
-<body
-    class="bg-stone-50 text-stone-900 min-h-screen flex flex-col justify-between selection:bg-stone-200 selection:text-stone-900 relative overflow-x-hidden">
-
-    <!-- Ambient Background Image & Glows -->
-    <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
-        <!-- Clean Light Image overlay with balanced opacity for perfect text readability -->
-        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.3]"
-            style="background-image: url('./bg.png');"></div>
-        <!-- Very subtle glow to keep background simple and sophisticated -->
-        <div class="absolute -top-[10%] -right-[10%] w-[50%] h-[50%] rounded-full bg-amber-100/10 blur-[80px]"></div>
-        <div class="absolute -bottom-[10%] -left-[5%] w-[40%] h-[40%] rounded-full bg-rose-50/15 blur-[80px]"></div>
-    </div>
-
-    <!-- Content Wrapper -->
-    <div class="relative z-10 flex flex-col justify-between min-h-screen w-full">
-
-        <!-- Main Container -->
-        <main class="max-w-2xl mx-auto px-6 py-20 w-full space-y-20">
-
-            <!-- 1. Header / Profile & Contact -->
-            <header class="space-y-6">
-                <div class="space-y-2">
-                    <h1 class="text-4xl font-bold font-title tracking-tight text-stone-900">
-                        Narenai
-                    </h1>
-                    <p class="text-sm font-semibold tracking-widest text-stone-500 uppercase">
-                        Composer / Arranger
-                    </p>
-                </div>
-                <p class="text-stone-700 leading-relaxed text-sm max-w-lg" data-i18n="profile-desc">
-                    韓国と日本の地下アイドルを中心に楽曲提供をしています。
-                </p>
-
-                <!-- Contact Links (Inline inside profile) -->
-                <div class="pt-4 space-y-4">
-                    <p class="text-xs text-stone-500 leading-relaxed" data-i18n="contact-desc">
-                        ご依頼は、XのDMよりお気軽にご相談ください。
-                    </p>
-                    <div class="flex items-center gap-3">
-                        <a href="https://x.com/naren4i" target="_blank" rel="noopener noreferrer"
-                            class="inline-flex items-center gap-2 text-xs font-medium text-stone-700 hover:text-stone-955 transition-all duration-200 bg-white/70 hover:bg-white/95 px-3.5 py-2 rounded-lg border border-stone-200/60 backdrop-blur-sm shadow-sm">
-                            <!-- X Icon -->
-                            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                <path
-                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
-                                </path>
-                            </svg>
-                            <span>X (Twitter)</span>
-                        </a>
-                        <a href="https://www.youtube.com/@narenai" target="_blank" rel="noopener noreferrer"
-                            class="inline-flex items-center gap-2 text-xs font-medium text-stone-700 hover:text-stone-955 transition-all duration-200 bg-white/70 hover:bg-white/95 px-3.5 py-2 rounded-lg border border-stone-200/60 backdrop-blur-sm shadow-sm">
-                            <!-- Youtube Icon -->
-                            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                <path
-                                    d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.108C19.53 3.5 12 3.5 12 3.5s-7.53 0-9.388.555A3.002 3.002 0 0 0 .502 6.163C0 8.07 0 12 0 12s0 3.93 .502 5.837a3.003 3.003 0 0 0 2.11 2.108C4.47 20.5 12 20.5 12 20.5s7.53 0 9.388-.555a3.002 3.002 0 0 0 2.11-2.108C24 15.93 24 12 24 12s0-3.93-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z">
-                                </path>
-                            </svg>
-                            <span>YOUTUBE</span>
-                        </a>
-                    </div>
-                </div>
-            </header>
-
-            <!-- 2. Works -->
-            <section class="space-y-8">
-                <h2 class="text-xs font-semibold tracking-widest text-stone-400 uppercase border-b border-stone-200 pb-3"
-                    data-i18n="works-title">
-                    Works
-                </h2>
-                <div class="space-y-8">
-                    <!-- Aubemare -->
-                    <div class="space-y-3">
-                        <h3
-                            class="text-sm font-semibold text-stone-800 font-title tracking-wide flex items-center gap-2">
-                            <span class="w-1.5 h-1.5 rounded-full bg-amber-500/80"></span>
-                            <span>Aubemare</span>
-                        </h3>
-                        <div class="pl-4 border-l border-stone-200/80 space-y-2">
-                            <a href="https://youtu.be/xtSkvudO084" target="_blank" rel="noopener noreferrer"
-                                class="py-2.5 flex items-center justify-between gap-4 group hover:bg-white/40 px-3 -mx-3 rounded-lg transition-all duration-200">
-                                <div class="flex items-center gap-3 min-w-0">
-                                    <span class="text-xs font-mono text-stone-400 shrink-0">2024</span>
-                                    <span
-                                        class="text-sm font-medium text-stone-800 truncate group-hover:text-amber-800 transition-colors">도화</span>
-                                </div>
-                                <span data-i18n="role-comp-arr"
-                                    class="text-xs px-2.5 py-1 rounded-full bg-white/80 text-stone-600 border border-stone-200/80 shrink-0 backdrop-blur-sm group-hover:border-amber-300 group-hover:text-amber-800 group-hover:bg-amber-50/50 transition-all shadow-sm">作曲・編曲</span>
-                            </a>
-                            <a href="https://youtu.be/oN4OhS6gHuY" target="_blank" rel="noopener noreferrer"
-                                class="py-2.5 flex items-center justify-between gap-4 group hover:bg-white/40 px-3 -mx-3 rounded-lg transition-all duration-200">
-                                <div class="flex items-center gap-3 min-w-0">
-                                    <span class="text-xs font-mono text-stone-400 shrink-0">2024</span>
-                                    <span
-                                        class="text-sm font-medium text-stone-800 truncate group-hover:text-amber-800 transition-colors">백야</span>
-                                </div>
-                                <span data-i18n="role-comp-arr"
-                                    class="text-xs px-2.5 py-1 rounded-full bg-white/80 text-stone-600 border border-stone-200/80 shrink-0 backdrop-blur-sm group-hover:border-amber-300 group-hover:text-amber-800 group-hover:bg-amber-50/50 transition-all shadow-sm">作曲・編曲</span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- b∞km@rk -->
-                    <div class="space-y-3">
-                        <h3
-                            class="text-sm font-semibold text-stone-800 font-title tracking-wide flex items-center gap-2">
-                            <span class="w-1.5 h-1.5 rounded-full bg-amber-500/80"></span>
-                            <span>b∞km@rk</span>
-                        </h3>
-                        <div class="pl-4 border-l border-stone-200/80 space-y-2">
-                            <a href="https://www.youtube.com/watch?v=f4_I4T9ePq0" target="_blank"
-                                rel="noopener noreferrer"
-                                class="py-2.5 flex items-center justify-between gap-4 group hover:bg-white/40 px-3 -mx-3 rounded-lg transition-all duration-200">
-                                <div class="flex items-center gap-3 min-w-0">
-                                    <span class="text-xs font-mono text-stone-400 shrink-0">2026</span>
-                                    <span
-                                        class="text-sm font-medium text-stone-800 truncate group-hover:text-amber-800 transition-colors">残響はまだ消えない</span>
-                                </div>
-                                <span data-i18n="role-all"
-                                    class="text-xs px-2.5 py-1 rounded-full bg-white/80 text-stone-600 border border-stone-200/80 shrink-0 backdrop-blur-sm group-hover:border-amber-300 group-hover:text-amber-800 group-hover:bg-amber-50/50 transition-all shadow-sm">作詞・作曲・編曲</span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Celestial Squad -->
-                    <div class="space-y-3">
-                        <h3
-                            class="text-sm font-semibold text-stone-800 font-title tracking-wide flex items-center gap-2">
-                            <span class="w-1.5 h-1.5 rounded-full bg-amber-500/80"></span>
-                            <span>Celestial Squad</span>
-                        </h3>
-                        <div class="pl-4 border-l border-stone-200/80 space-y-2">
-                            <a href="https://youtu.be/gv13keUixHU?si=38T8lBg25uChmKsT&t=662" target="_blank"
-                                rel="noopener noreferrer"
-                                class="py-2.5 flex items-center justify-between gap-4 group hover:bg-white/40 px-3 -mx-3 rounded-lg transition-all duration-200">
-                                <div class="flex items-center gap-3 min-w-0">
-                                    <span class="text-xs font-mono text-stone-400 shrink-0">2025</span>
-                                    <span
-                                        class="text-sm font-medium text-stone-800 truncate group-hover:text-amber-800 transition-colors">항해</span>
-                                </div>
-                                <span data-i18n="role-comp-arr"
-                                    class="text-xs px-2.5 py-1 rounded-full bg-white/80 text-stone-600 border border-stone-200/80 shrink-0 backdrop-blur-sm group-hover:border-amber-300 group-hover:text-amber-800 group-hover:bg-amber-50/50 transition-all shadow-sm">作曲・編曲</span>
-                            </a>
-                            <a href="https://youtu.be/8rfsofOQeXs" target="_blank" rel="noopener noreferrer"
-                                class="py-2.5 flex items-center justify-between gap-4 group hover:bg-white/40 px-3 -mx-3 rounded-lg transition-all duration-200">
-                                <div class="flex items-center gap-3 min-w-0">
-                                    <span class="text-xs font-mono text-stone-400 shrink-0">2024</span>
-                                    <span
-                                        class="text-sm font-medium text-stone-800 truncate group-hover:text-amber-800 transition-colors">활로</span>
-                                </div>
-                                <span data-i18n="role-comp-arr"
-                                    class="text-xs px-2.5 py-1 rounded-full bg-white/80 text-stone-600 border border-stone-200/80 shrink-0 backdrop-blur-sm group-hover:border-amber-300 group-hover:text-amber-800 group-hover:bg-amber-50/50 transition-all shadow-sm">作曲・編曲</span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- CYBERNETICS -->
-                    <div class="space-y-3">
-                        <h3
-                            class="text-sm font-semibold text-stone-800 font-title tracking-wide flex items-center gap-2">
-                            <span class="w-1.5 h-1.5 rounded-full bg-amber-500/80"></span>
-                            <span>CYBERNETICS</span>
-                        </h3>
-                        <div class="pl-4 border-l border-stone-200/80 space-y-2">
-                            <a href="https://youtu.be/aZqa_RDUf4E" target="_blank" rel="noopener noreferrer"
-                                class="py-2.5 flex items-center justify-between gap-4 group hover:bg-white/40 px-3 -mx-3 rounded-lg transition-all duration-200">
-                                <div class="flex items-center gap-3 min-w-0">
-                                    <span class="text-xs font-mono text-stone-400 shrink-0">2025</span>
-                                    <span
-                                        class="text-sm font-medium text-stone-800 truncate group-hover:text-amber-800 transition-colors">MAYDAY</span>
-                                </div>
-                                <span data-i18n="role-co-all"
-                                    class="text-xs px-2.5 py-1 rounded-full bg-white/80 text-stone-600 border border-stone-200/80 shrink-0 backdrop-blur-sm group-hover:border-amber-300 group-hover:text-amber-800 group-hover:bg-amber-50/50 transition-all shadow-sm">共作詞・作曲・編曲</span>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- C¥BΞRDEL!C -->
-                    <div class="space-y-3">
-                        <h3
-                            class="text-sm font-semibold text-stone-800 font-title tracking-wide flex items-center gap-2">
-                            <span class="w-1.5 h-1.5 rounded-full bg-amber-500/80"></span>
-                            <span>C¥BΞRDEL!C</span>
-                        </h3>
-                        <div class="pl-4 border-l border-stone-200/80 space-y-2">
-                            <a href="https://www.youtube.com/watch?v=6sAeo9H42w8" target="_blank" rel="noopener noreferrer"
-                                class="py-2.5 flex items-center justify-between gap-4 group hover:bg-white/40 px-3 -mx-3 rounded-lg transition-all duration-200">
-                                <div class="flex items-center gap-3 min-w-0">
-                                    <span class="text-xs font-mono text-stone-400 shrink-0">2026</span>
-                                    <span
-                                        class="text-sm font-medium text-stone-800 truncate group-hover:text-amber-800 transition-colors">TR!PPY</span>
-                                </div>
-                                <span data-i18n="role-comp-arr"
-                                    class="text-xs px-2.5 py-1 rounded-full bg-white/80 text-stone-600 border border-stone-200/80 shrink-0 backdrop-blur-sm group-hover:border-amber-300 group-hover:text-amber-800 group-hover:bg-amber-50/50 transition-all shadow-sm">作曲・編曲</span>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- Hinonaka -->
-                    <div class="space-y-3">
-                        <h3
-                            class="text-sm font-semibold text-stone-800 font-title tracking-wide flex items-center gap-2">
-                            <span class="w-1.5 h-1.5 rounded-full bg-amber-500/80"></span>
-                            <span>Hinonaka</span>
-                        </h3>
-                        <div class="pl-4 border-l border-stone-200/80 space-y-2">
-                            <a href="https://youtu.be/ijiYvLPw4Mo?si=fpeyo_j10-5HnqT_&t=1495" target="_blank"
-                                rel="noopener noreferrer"
-                                class="py-2.5 flex items-center justify-between gap-4 group hover:bg-white/40 px-3 -mx-3 rounded-lg transition-all duration-200">
-                                <div class="flex items-center gap-3 min-w-0">
-                                    <span class="text-xs font-mono text-stone-400 shrink-0">2025</span>
-                                    <span
-                                        class="text-sm font-medium text-stone-800 truncate group-hover:text-amber-800 transition-colors">Luminous</span>
-                                </div>
-                                <span data-i18n="role-comp-arr"
-                                    class="text-xs px-2.5 py-1 rounded-full bg-white/80 text-stone-600 border border-stone-200/80 shrink-0 backdrop-blur-sm group-hover:border-amber-300 group-hover:text-amber-800 group-hover:bg-amber-50/50 transition-all shadow-sm">作曲・編曲</span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Idol Preview Project -->
-                    <div class="space-y-3">
-                        <h3
-                            class="text-sm font-semibold text-stone-800 font-title tracking-wide flex items-center gap-2">
-                            <span class="w-1.5 h-1.5 rounded-full bg-amber-500/80"></span>
-                            <span>Idol Preview Project</span>
-                        </h3>
-                        <div class="pl-4 border-l border-stone-200/80 space-y-2">
-                            <div class="py-2.5 flex items-center justify-between gap-4 px-3 -mx-3 rounded-lg">
-                                <div class="flex items-center gap-3 min-w-0">
-                                    <span class="text-xs font-mono text-stone-400 shrink-0">2026</span>
-                                    <span class="text-sm font-medium text-stone-700 truncate">SE</span>
-                                </div>
-                                <div class="flex items-center gap-2">
-                                    <span data-i18n="role-comp-arr"
-                                        class="text-xs px-2.5 py-1 rounded-full bg-white/60 text-stone-500 border border-stone-200/60 shrink-0 backdrop-blur-sm shadow-sm">作曲・編曲</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- LyuU -->
-                    <div class="space-y-3">
-                        <h3
-                            class="text-sm font-semibold text-stone-800 font-title tracking-wide flex items-center gap-2">
-                            <span class="w-1.5 h-1.5 rounded-full bg-amber-500/80"></span>
-                            <span>LyuU</span>
-                        </h3>
-                        <div class="pl-4 border-l border-stone-200/80 space-y-2">
-                            <a href="https://youtu.be/AZ5VLJRaYgU" target="_blank" rel="noopener noreferrer"
-                                class="py-2.5 flex items-center justify-between gap-4 group hover:bg-white/40 px-3 -mx-3 rounded-lg transition-all duration-200">
-                                <div class="flex items-center gap-3 min-w-0">
-                                    <span class="text-xs font-mono text-stone-400 shrink-0">2016</span>
-                                    <span
-                                        class="text-sm font-medium text-stone-800 truncate group-hover:text-amber-800 transition-colors">レグルス</span>
-                                </div>
-                                <span data-i18n="role-all"
-                                    class="text-xs px-2.5 py-1 rounded-full bg-white/80 text-stone-600 border border-stone-200/80 shrink-0 backdrop-blur-sm group-hover:border-amber-300 group-hover:text-amber-800 group-hover:bg-amber-50/50 transition-all shadow-sm">作詞・作曲・編曲</span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Reveon -->
-                    <div class="space-y-3">
-                        <h3
-                            class="text-sm font-semibold text-stone-800 font-title tracking-wide flex items-center gap-2">
-                            <span class="w-1.5 h-1.5 rounded-full bg-amber-500/80"></span>
-                            <span>Reveon</span>
-                        </h3>
-                        <div class="pl-4 border-l border-stone-200/80 space-y-2">
-                            <a href="https://www.youtube.com/watch?v=fmEJln9Nzw4&t=1170s" target="_blank" rel="noopener noreferrer"
-                                class="py-2.5 flex items-center justify-between gap-4 group hover:bg-white/40 px-3 -mx-3 rounded-lg transition-all duration-200">
-                                <div class="flex items-center gap-3 min-w-0">
-                                    <span class="text-xs font-mono text-stone-400 shrink-0">2026</span>
-                                    <span
-                                        class="text-sm font-medium text-stone-800 truncate group-hover:text-amber-800 transition-colors">Change!</span>
-                                </div>
-                                <span data-i18n="role-comp-arr"
-                                    class="text-xs px-2.5 py-1 rounded-full bg-white/80 text-stone-600 border border-stone-200/80 shrink-0 backdrop-blur-sm group-hover:border-amber-300 group-hover:text-amber-800 group-hover:bg-amber-50/50 transition-all shadow-sm">作曲・編曲</span>
-                            </a>
-                            <div class="py-2.5 flex items-center justify-between gap-4 px-3 -mx-3 rounded-lg">
-                                <div class="flex items-center gap-3 min-w-0">
-                                    <span class="text-xs font-mono text-stone-400 shrink-0">2026</span>
-                                    <span class="text-sm font-medium text-stone-700 truncate">SE</span>
-                                </div>
-                                <div class="flex items-center gap-2">
-                                    <span data-i18n="role-comp-arr"
-                                        class="text-xs px-2.5 py-1 rounded-full bg-white/60 text-stone-500 border border-stone-200/60 shrink-0 backdrop-blur-sm shadow-sm">作曲・編曲</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 羽澄るな -->
-                    <div class="space-y-3">
-                        <h3
-                            class="text-sm font-semibold text-stone-800 font-title tracking-wide flex items-center gap-2">
-                            <span class="w-1.5 h-1.5 rounded-full bg-amber-500/80"></span>
-                            <span>羽澄るな</span>
-                        </h3>
-                        <div class="pl-4 border-l border-stone-200/80 space-y-2">
-                            <div class="py-2.5 flex items-center justify-between gap-4 px-3 -mx-3 rounded-lg">
-                                <div class="flex items-center gap-3 min-w-0">
-                                    <span class="text-xs font-mono text-stone-400 shrink-0">2026</span>
-                                    <span class="text-sm font-medium text-stone-700 truncate">Bouquet</span>
-                                </div>
-                                <div class="flex items-center gap-2">
-                                    <span data-i18n="role-arr"
-                                        class="text-xs px-2.5 py-1 rounded-full bg-white/60 text-stone-500 border border-stone-200/60 shrink-0 backdrop-blur-sm shadow-sm">編曲</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- ふわふわりん♡パステル -->
-                    <div class="space-y-3">
-                        <h3
-                            class="text-sm font-semibold text-stone-800 font-title tracking-wide flex items-center gap-2">
-                            <span class="w-1.5 h-1.5 rounded-full bg-amber-500/80"></span>
-                            <span>ふわふわりん♡パステル</span>
-                        </h3>
-                        <div class="pl-4 border-l border-stone-200/80 space-y-2">
-                            <a href="https://youtu.be/stISRE5xerE" target="_blank" rel="noopener noreferrer"
-                                class="py-2.5 flex items-center justify-between gap-4 group hover:bg-white/40 px-3 -mx-3 rounded-lg transition-all duration-200">
-                                <div class="flex items-center gap-3 min-w-0">
-                                    <span class="text-xs font-mono text-stone-400 shrink-0">2025</span>
-                                    <span
-                                        class="text-sm font-medium text-stone-800 truncate group-hover:text-amber-800 transition-colors">夏の色はパステル色</span>
-                                </div>
-                                <span data-i18n="role-all"
-                                    class="text-xs px-2.5 py-1 rounded-full bg-white/80 text-stone-600 border border-stone-200/80 shrink-0 backdrop-blur-sm group-hover:border-amber-300 group-hover:text-amber-800 group-hover:bg-amber-50/50 transition-all shadow-sm">作詞・作曲・編曲</span>
-                            </a>
-                            <a href="https://youtu.be/K4BuYlFx53M" target="_blank" rel="noopener noreferrer"
-                                class="py-2.5 flex items-center justify-between gap-4 group hover:bg-white/40 px-3 -mx-3 rounded-lg transition-all duration-200">
-                                <div class="flex items-center gap-3 min-w-0">
-                                    <span class="text-xs font-mono text-stone-400 shrink-0">2025</span>
-                                    <span
-                                        class="text-sm font-medium text-stone-800 truncate group-hover:text-amber-800 transition-colors">Sugar
-                                        Rush</span>
-                                </div>
-                                <span data-i18n="role-comp-arr"
-                                    class="text-xs px-2.5 py-1 rounded-full bg-white/80 text-stone-600 border border-stone-200/80 shrink-0 backdrop-blur-sm group-hover:border-amber-300 group-hover:text-amber-800 group-hover:bg-amber-50/50 transition-all shadow-sm">作曲・編曲</span>
-                            </a>
-                            <a href="https://youtu.be/EDMQTQr0KZo" target="_blank" rel="noopener noreferrer"
-                                class="py-2.5 flex items-center justify-between gap-4 group hover:bg-white/40 px-3 -mx-3 rounded-lg transition-all duration-200">
-                                <div class="flex items-center gap-3 min-w-0">
-                                    <span class="text-xs font-mono text-stone-400 shrink-0">2025</span>
-                                    <span
-                                        class="text-sm font-medium text-stone-800 truncate group-hover:text-amber-800 transition-colors">Pastel
-                                        Dream</span>
-                                </div>
-                                <span data-i18n="role-comp-arr"
-                                    class="text-xs px-2.5 py-1 rounded-full bg-white/80 text-stone-600 border border-stone-200/80 shrink-0 backdrop-blur-sm group-hover:border-amber-300 group-hover:text-amber-800 group-hover:bg-amber-50/50 transition-all shadow-sm">作曲・編曲</span>
-                            </a>
-                            <a href="https://youtu.be/IJpAxe4c7Pk" target="_blank" rel="noopener noreferrer"
-                                class="py-2.5 flex items-center justify-between gap-4 group hover:bg-white/40 px-3 -mx-3 rounded-lg transition-all duration-200">
-                                <div class="flex items-center gap-3 min-w-0">
-                                    <span class="text-xs font-mono text-stone-400 shrink-0">2025</span>
-                                    <span
-                                        class="text-sm font-medium text-stone-800 truncate group-hover:text-amber-800 transition-colors">SE</span>
-                                </div>
-                                <span data-i18n="role-comp-arr"
-                                    class="text-xs px-2.5 py-1 rounded-full bg-white/80 text-stone-600 border border-stone-200/80 shrink-0 backdrop-blur-sm group-hover:border-amber-300 group-hover:text-amber-800 group-hover:bg-amber-50/50 transition-all shadow-sm">作曲・編曲</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-        </main>
-
-    </div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const i18n = {
-                ko: {
-                    "profile-desc": "한국과 일본의 지하 아이돌을 중심으로 곡을 제공하고 있습니다.",
-                    "contact-desc": "의뢰는 X의 DM으로 편하게 문의해주세요.",
-                    "role-all": "작사・작곡・편곡",
-                    "role-comp-arr": "작곡・편곡",
-                    "role-co-all": "작곡・편곡・공동 작사",
-                    "role-arr": "편곡",
-                    "works-title": "Works"
-                },
-                ja: {
-                    "profile-desc": "韓国と日本の地下アイドルを中心に楽曲提供をしています。",
-                    "contact-desc": "ご依頼は、XのDMよりお気軽にご相談ください。",
-                    "role-all": "作詞・作曲・編曲",
-                    "role-comp-arr": "作曲・編曲",
-                    "role-co-all": "作曲・編曲・共作詞",
-                    "role-arr": "編曲",
-                    "works-title": "Works"
-                }
-            };
-
-            let preferredLang = 'ja';
-            if (navigator.languages && navigator.languages.length > 0) {
-                preferredLang = navigator.languages[0];
-            } else {
-                preferredLang = navigator.language || navigator.userLanguage || 'ja';
-            }
-            const lang = preferredLang.toLowerCase().startsWith('ko') ? 'ko' : 'ja';
-
-            document.documentElement.lang = lang;
-
-            document.querySelectorAll("[data-i18n]").forEach(elem => {
-                const key = elem.getAttribute("data-i18n");
-                if (i18n[lang] && i18n[lang][key]) {
-                    elem.textContent = i18n[lang][key];
-                }
-            });
-        });
-    </script>
-</body>
-
-</html>
+<body>
+<a class="skip-link" href="#catalog" data-ui="skip">楽曲一覧へ</a>
+<div class="page-shell">
+<header class="topbar"><a class="wordmark" href="#top" aria-label="narenai home"><span class="brand-icon" aria-hidden="true"><i></i><i></i><i></i><i></i></span>narenai<span class="brand-dot">.</span></a><div class="topbar-right"><nav aria-label="Navigation"><a href="#vocaloid">Vocaloid</a><a href="#works">Works</a></nav><div class="language-switch" role="group" aria-label="Language" hidden><button type="button" data-lang="ja" aria-pressed="true">JP</button><span aria-hidden="true">/</span><button type="button" data-lang="ko" aria-pressed="false">KR</button></div></div></header>
+<main id="top">
+<section class="hero" aria-labelledby="profile-title"><div class="hero-main"><p class="eyebrow"><span></span>COMPOSER / ARRANGER</p><h1 id="profile-title">narenai<span>.</span></h1><p class="profile-desc" data-i18n="profile-desc">韓国と日本の地下アイドルを中心に楽曲提供をしています。</p></div><div class="contact"><div class="contact-mark" aria-hidden="true">↗</div><p data-i18n="contact-desc">ご依頼は、XのDMよりお気軽にご相談ください。</p><div class="social-links"><a class="social-primary" href="https://x.com/naren4i" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>X (Twitter) <span aria-hidden="true">↗</span></a><a href="https://www.youtube.com/@narenai" target="_blank" rel="noopener noreferrer">YOUTUBE <span aria-hidden="true">↗</span></a></div></div></section>
+<div id="catalog" class="catalog">
+<div class="catalog-toolbar" hidden><div class="filters" role="group" aria-label="楽曲の絞り込み" data-ui-aria="filter"><button type="button" class="filter active" data-filter="all" aria-pressed="true"><span data-ui="all">すべて</span><small>21</small></button><button type="button" class="filter" data-filter="vocaloid" aria-pressed="false">Vocaloid<small>2</small></button><button type="button" class="filter" data-filter="works" aria-pressed="false">Works<small>19</small></button></div><div class="view-switch" role="group" aria-label="表示形式" data-ui-aria="view"><button type="button" data-view="grid" aria-pressed="true" aria-label="サムネイル表示" data-ui-aria="grid"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg></button><button type="button" data-view="list" aria-pressed="false" aria-label="リスト表示" data-ui-aria="list"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 6h12M9 12h12M9 18h12M3 6h2M3 12h2M3 18h2"/></svg></button></div></div>
+<!-- DATES: release dates below were supplied by the user.
+     Replace each time element's datetime with the actual YYYY-MM-DD date.
+     script.js synchronizes the visible date and sorts the cards from newest to oldest. -->
+<section class="music-section" id="tracks" aria-labelledby="tracks-title">
+<div class="section-heading"><h2 id="tracks-title"><span id="category-title">All</span><span class="section-count">21</span></h2><span class="section-line"></span></div>
+<div class="song-grid">
+<article class="song-card" data-category="works"><div class="song-link"><div class="thumbnail"><span class="cover-art cover-1" aria-hidden="true"><span class="cover-label">reveon</span><span class="record"></span><span class="cover-title">히어리</span></span></div><div class="song-info"><div class="song-meta"><span class="artist">reveon</span><time class="release-date" datetime="2026-10-25">2026-10-25</time></div><h3>히어리</h3><div class="song-bottom"><span class="role" data-i18n="role-comp-arr">作曲・編曲</span></div></div></div></article>
+<article class="song-card" data-category="works"><a class="song-link" href="https://www.youtube.com/watch?v=8t5GBPuH4S8" target="_blank" rel="noopener noreferrer"><div class="thumbnail"><span class="cover-art cover-1" aria-hidden="true"><span class="cover-label">ORIKA</span><span class="record"></span><span class="cover-title">SHINE</span></span><img src="https://i.ytimg.com/vi/8t5GBPuH4S8/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360"><span class="play-icon" aria-hidden="true">▶</span></div><div class="song-info"><div class="song-meta"><span class="artist">ORIKA</span><time class="release-date" datetime="2026-10-17">2026-10-17</time></div><h3>SHINE</h3><div class="song-bottom"><span class="role" data-i18n="role-comp-arr">作曲・編曲</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></div></div></a></article>
+<article class="song-card" data-category="works"><div class="song-link"><div class="thumbnail"><span class="cover-art cover-3" aria-hidden="true"><span class="cover-label">Idol Preview Project</span><span class="record"></span><span class="cover-title">SE</span></span></div><div class="song-info"><div class="song-meta"><span class="artist">Idol Preview Project</span><time class="release-date" datetime="2026-07-26">2026-07-26</time></div><h3>SE</h3><div class="song-bottom"><span class="role" data-i18n="role-comp-arr">作曲・編曲</span></div></div></div></article>
+<article class="song-card" data-category="works"><div class="song-link"><div class="thumbnail"><span class="cover-art cover-1" aria-hidden="true"><span class="cover-label">Reveon</span><span class="record"></span><span class="cover-title">SE</span></span></div><div class="song-info"><div class="song-meta"><span class="artist">Reveon</span><time class="release-date" datetime="2026-07-17">2026-07-17</time></div><h3>SE</h3><div class="song-bottom"><span class="role" data-i18n="role-comp-arr">作曲・編曲</span></div></div></div></article>
+<article class="song-card" data-category="works"><a class="song-link" href="https://www.youtube.com/watch?v=fmEJln9Nzw4&amp;t=1170s" target="_blank" rel="noopener noreferrer"><div class="thumbnail"><span class="cover-art cover-0" aria-hidden="true"><span class="cover-label">Reveon</span><span class="record"></span><span class="cover-title">Change!</span></span><img src="https://i.ytimg.com/vi/fmEJln9Nzw4/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360"><span class="play-icon" aria-hidden="true">▶</span></div><div class="song-info"><div class="song-meta"><span class="artist">Reveon</span><time class="release-date" datetime="2026-07-17">2026-07-17</time></div><h3>Change!</h3><div class="song-bottom"><span class="role" data-i18n="role-comp-arr">作曲・編曲</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></div></div></a></article>
+<article class="song-card" data-category="works"><a class="song-link" href="https://www.youtube.com/watch?v=6sAeo9H42w8" target="_blank" rel="noopener noreferrer"><div class="thumbnail"><span class="cover-art cover-1" aria-hidden="true"><span class="cover-label">C¥BΞRDEL!C</span><span class="record"></span><span class="cover-title">TR!PPY</span></span><img src="https://i.ytimg.com/vi/6sAeo9H42w8/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360"><span class="play-icon" aria-hidden="true">▶</span></div><div class="song-info"><div class="song-meta"><span class="artist">C¥BΞRDEL!C</span><time class="release-date" datetime="2026-07-05">2026-07-05</time></div><h3>TR!PPY</h3><div class="song-bottom"><span class="role" data-i18n="role-comp-arr">作曲・編曲</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></div></div></a></article>
+<article class="song-card" data-category="works"><a class="song-link" href="https://www.youtube.com/watch?v=f4_I4T9ePq0" target="_blank" rel="noopener noreferrer"><div class="thumbnail"><span class="cover-art cover-2" aria-hidden="true"><span class="cover-label">b∞km@rk</span><span class="record"></span><span class="cover-title">残響はまだ消えない</span></span><img src="https://i.ytimg.com/vi/f4_I4T9ePq0/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360"><span class="play-icon" aria-hidden="true">▶</span></div><div class="song-info"><div class="song-meta"><span class="artist">b∞km@rk</span><time class="release-date" datetime="2026-05-15">2026-05-15</time></div><h3>残響はまだ消えない</h3><div class="song-bottom"><span class="role" data-i18n="role-all">作詞・作曲・編曲</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></div></div></a></article>
+<article class="song-card" data-category="works"><div class="song-link"><div class="thumbnail"><span class="cover-art cover-2" aria-hidden="true"><span class="cover-label">羽澄るな</span><span class="record"></span><span class="cover-title">Bouquet</span></span></div><div class="song-info"><div class="song-meta"><span class="artist">羽澄るな</span><time class="release-date" datetime="2026-03-08">2026-03-08</time></div><h3>Bouquet</h3><div class="song-bottom"><span class="role" data-i18n="role-arr">編曲</span></div></div></div></article>
+<article class="song-card" data-category="vocaloid"><a class="song-link" href="https://www.nicovideo.jp/watch/so45515689" target="_blank" rel="noopener noreferrer"><div class="thumbnail"><span class="cover-art cover-0" aria-hidden="true"><span class="cover-label">花隈千冬</span><span class="record"></span><span class="cover-title">モノローグ</span></span></div><div class="song-info"><div class="song-meta"><span class="artist">花隈千冬</span><time class="release-date" datetime="2025-11-21">2025-11-21</time></div><h3>モノローグ</h3><div class="song-bottom"><span class="role" data-i18n="role-all">作詞・作曲・編曲</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></div></div></a></article>
+<article class="song-card" data-category="works"><a class="song-link" href="https://youtu.be/gv13keUixHU?si=38T8lBg25uChmKsT&amp;t=662" target="_blank" rel="noopener noreferrer"><div class="thumbnail"><span class="cover-art cover-3" aria-hidden="true"><span class="cover-label">Celestial Squad</span><span class="record"></span><span class="cover-title">항해</span></span><img src="https://i.ytimg.com/vi/gv13keUixHU/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360"><span class="play-icon" aria-hidden="true">▶</span></div><div class="song-info"><div class="song-meta"><span class="artist">Celestial Squad</span><time class="release-date" datetime="2025-09-27">2025-09-27</time></div><h3>항해</h3><div class="song-bottom"><span class="role" data-i18n="role-comp-arr">作曲・編曲</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></div></div></a></article>
+<article class="song-card" data-category="works"><a class="song-link" href="https://youtu.be/stISRE5xerE" target="_blank" rel="noopener noreferrer"><div class="thumbnail"><span class="cover-art cover-3" aria-hidden="true"><span class="cover-label">ふわふわりん♡パステル</span><span class="record"></span><span class="cover-title">夏の色はパステル色</span></span><img src="https://i.ytimg.com/vi/stISRE5xerE/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360"><span class="play-icon" aria-hidden="true">▶</span></div><div class="song-info"><div class="song-meta"><span class="artist">ふわふわりん♡パステル</span><time class="release-date" datetime="2025-08-17">2025-08-17</time></div><h3>夏の色はパステル色</h3><div class="song-bottom"><span class="role" data-i18n="role-all">作詞・作曲・編曲</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></div></div></a></article>
+<article class="song-card" data-category="works"><a class="song-link" href="https://youtu.be/aZqa_RDUf4E" target="_blank" rel="noopener noreferrer"><div class="thumbnail"><span class="cover-art cover-0" aria-hidden="true"><span class="cover-label">CYBERNETICS</span><span class="record"></span><span class="cover-title">MAYDAY</span></span><img src="https://i.ytimg.com/vi/aZqa_RDUf4E/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360"><span class="play-icon" aria-hidden="true">▶</span></div><div class="song-info"><div class="song-meta"><span class="artist">CYBERNETICS</span><time class="release-date" datetime="2025-08-13">2025-08-13</time></div><h3>MAYDAY</h3><div class="song-bottom"><span class="role" data-i18n="role-co-all">共作詞・作曲・編曲</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></div></div></a></article>
+<article class="song-card" data-category="works"><a class="song-link" href="https://youtu.be/K4BuYlFx53M" target="_blank" rel="noopener noreferrer"><div class="thumbnail"><span class="cover-art cover-4" aria-hidden="true"><span class="cover-label">ふわふわりん♡パステル</span><span class="record"></span><span class="cover-title">Sugar Rush</span></span><img src="https://i.ytimg.com/vi/K4BuYlFx53M/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360"><span class="play-icon" aria-hidden="true">▶</span></div><div class="song-info"><div class="song-meta"><span class="artist">ふわふわりん♡パステル</span><time class="release-date" datetime="2025-05-14">2025-05-14</time></div><h3>Sugar Rush</h3><div class="song-bottom"><span class="role" data-i18n="role-comp-arr">作曲・編曲</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></div></div></a></article>
+<article class="song-card" data-category="works"><a class="song-link" href="https://youtu.be/IJpAxe4c7Pk" target="_blank" rel="noopener noreferrer"><div class="thumbnail"><span class="cover-art cover-1" aria-hidden="true"><span class="cover-label">ふわふわりん♡パステル</span><span class="record"></span><span class="cover-title">SE</span></span><img src="https://i.ytimg.com/vi/IJpAxe4c7Pk/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360"><span class="play-icon" aria-hidden="true">▶</span></div><div class="song-info"><div class="song-meta"><span class="artist">ふわふわりん♡パステル</span><time class="release-date" datetime="2025-05-14">2025-05-14</time></div><h3>SE</h3><div class="song-bottom"><span class="role" data-i18n="role-comp-arr">作曲・編曲</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></div></div></a></article>
+<article class="song-card" data-category="works"><a class="song-link" href="https://youtu.be/EDMQTQr0KZo" target="_blank" rel="noopener noreferrer"><div class="thumbnail"><span class="cover-art cover-0" aria-hidden="true"><span class="cover-label">ふわふわりん♡パステル</span><span class="record"></span><span class="cover-title">Pastel Dream</span></span><img src="https://i.ytimg.com/vi/EDMQTQr0KZo/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360"><span class="play-icon" aria-hidden="true">▶</span></div><div class="song-info"><div class="song-meta"><span class="artist">ふわふわりん♡パステル</span><time class="release-date" datetime="2025-05-14">2025-05-14</time></div><h3>Pastel Dream</h3><div class="song-bottom"><span class="role" data-i18n="role-comp-arr">作曲・編曲</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></div></div></a></article>
+<article class="song-card" data-category="works"><a class="song-link" href="https://youtu.be/ijiYvLPw4Mo?si=fpeyo_j10-5HnqT_&amp;t=1495" target="_blank" rel="noopener noreferrer"><div class="thumbnail"><span class="cover-art cover-2" aria-hidden="true"><span class="cover-label">Hinonaka</span><span class="record"></span><span class="cover-title">Luminous</span></span><img src="https://i.ytimg.com/vi/ijiYvLPw4Mo/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360"><span class="play-icon" aria-hidden="true">▶</span></div><div class="song-info"><div class="song-meta"><span class="artist">Hinonaka</span><time class="release-date" datetime="2025-03-29">2025-03-29</time></div><h3>Luminous</h3><div class="song-bottom"><span class="role" data-i18n="role-comp-arr">作曲・編曲</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></div></div></a></article>
+<article class="song-card" data-category="works"><a class="song-link" href="https://youtu.be/xtSkvudO084" target="_blank" rel="noopener noreferrer"><div class="thumbnail"><span class="cover-art cover-0" aria-hidden="true"><span class="cover-label">Aubemare</span><span class="record"></span><span class="cover-title">도화</span></span><img src="https://i.ytimg.com/vi/xtSkvudO084/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360"><span class="play-icon" aria-hidden="true">▶</span></div><div class="song-info"><div class="song-meta"><span class="artist">Aubemare</span><time class="release-date" datetime="2024-10-25">2024-10-25</time></div><h3>도화</h3><div class="song-bottom"><span class="role" data-i18n="role-comp-arr">作曲・編曲</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></div></div></a></article>
+<article class="song-card" data-category="works"><a class="song-link" href="https://youtu.be/oN4OhS6gHuY" target="_blank" rel="noopener noreferrer"><div class="thumbnail"><span class="cover-art cover-1" aria-hidden="true"><span class="cover-label">Aubemare</span><span class="record"></span><span class="cover-title">백야</span></span><img src="https://i.ytimg.com/vi/oN4OhS6gHuY/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360"><span class="play-icon" aria-hidden="true">▶</span></div><div class="song-info"><div class="song-meta"><span class="artist">Aubemare</span><time class="release-date" datetime="2024-07-19">2024-07-19</time></div><h3>백야</h3><div class="song-bottom"><span class="role" data-i18n="role-comp-arr">作曲・編曲</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></div></div></a></article>
+<article class="song-card" data-category="works"><a class="song-link" href="https://youtu.be/8rfsofOQeXs" target="_blank" rel="noopener noreferrer"><div class="thumbnail"><span class="cover-art cover-4" aria-hidden="true"><span class="cover-label">Celestial Squad</span><span class="record"></span><span class="cover-title">활로</span></span><img src="https://i.ytimg.com/vi/8rfsofOQeXs/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360"><span class="play-icon" aria-hidden="true">▶</span></div><div class="song-info"><div class="song-meta"><span class="artist">Celestial Squad</span><time class="release-date" datetime="2024-03-24">2024-03-24</time></div><h3>활로</h3><div class="song-bottom"><span class="role" data-i18n="role-comp-arr">作曲・編曲</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></div></div></a></article>
+<article class="song-card" data-category="vocaloid"><a class="song-link" href="https://www.nicovideo.jp/watch/so42907219" target="_blank" rel="noopener noreferrer"><div class="thumbnail"><span class="cover-art cover-1" aria-hidden="true"><span class="cover-label">花隈千冬</span><span class="record"></span><span class="cover-title">サイカイ</span></span></div><div class="song-info"><div class="song-meta"><span class="artist">花隈千冬</span><time class="release-date" datetime="2023-11-02">2023-11-02</time></div><h3>サイカイ</h3><div class="song-bottom"><span class="role" data-i18n="role-all">作詞・作曲・編曲</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></div></div></a></article>
+<article class="song-card" data-category="works"><a class="song-link" href="https://youtu.be/AZ5VLJRaYgU" target="_blank" rel="noopener noreferrer"><div class="thumbnail"><span class="cover-art cover-4" aria-hidden="true"><span class="cover-label">LyuU</span><span class="record"></span><span class="cover-title">レグルス</span></span><img src="https://i.ytimg.com/vi/AZ5VLJRaYgU/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360"><span class="play-icon" aria-hidden="true">▶</span></div><div class="song-info"><div class="song-meta"><span class="artist">LyuU</span><time class="release-date" datetime="2016-04-22">2016-04-22</time></div><h3>レグルス</h3><div class="song-bottom"><span class="role" data-i18n="role-all">作詞・作曲・編曲</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></div></div></a></article>
+</div></section>
+</div></main><footer><a class="footer-name" href="#top">narenai<span>.</span></a><span>Composer / Arranger</span><a class="back-top" href="#top" data-ui-aria="top" aria-label="ページの先頭へ">↑</a></footer></div>
+</body></html>
